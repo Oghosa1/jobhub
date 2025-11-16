@@ -1,30 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:jobhub_mobile/controllers/exports.dart';
 import 'package:jobhub_mobile/views/ui/onboarding/onboarding_screen.dart';
-import 'package:provider/provider.dart';
 
 import 'views/common/exports.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => OnBoardNotifier()),
-        ChangeNotifierProvider(create: (context) => LoginNotifier()),
-        ChangeNotifierProvider(create: (context) => ZoomNotifier()),
-        ChangeNotifierProvider(create: (context) => SignUpNotifier()),
-        ChangeNotifierProvider(create: (context) => JobsNotifier()),
-        ChangeNotifierProvider(create: (context) => BookMarkNotifier()),
-        ChangeNotifierProvider(create: (context) => ImageUpoader()),
-        ChangeNotifierProvider(create: (context) => ProfileNotifier()),
-      ],
-      child: const MyApp(),
-    ),
-  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -38,12 +22,12 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return GetMaterialApp(
+        return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Dbestech JobHub',
           theme: ThemeData(
-            scaffoldBackgroundColor: Color(kLight.value),
-            iconTheme: IconThemeData(color: Color(kDark.value)),
+            scaffoldBackgroundColor: kLight,
+            iconTheme: const IconThemeData(color: kDark),
             primarySwatch: Colors.grey,
           ),
           home: const OnBoardingScreen(),

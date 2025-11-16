@@ -36,7 +36,7 @@ class ImageUpoader extends ChangeNotifier {
       uiSettings: [
         AndroidUiSettings(
           toolbarTitle: 'Jobhub Cropper',
-          toolbarColor: Color(kLightBlue.value),
+          toolbarColor: kLightBlue,
           toolbarWidgetColor: Colors.white,
           initAspectRatio: CropAspectRatioPreset.ratio4x3,
           lockAspectRatio: true,

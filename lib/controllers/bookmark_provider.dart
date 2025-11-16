@@ -1,6 +1,3 @@
 import 'package:flutter/material.dart';
 
-
-class BookMarkNotifier extends ChangeNotifier {
-  
-}
+class BookMarkNotifier extends ChangeNotifier {}

@@ -1,13 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class OnBoardNotifier extends ChangeNotifier {
-  
-  bool _isLastPage = false;
+class OnBoardNotifier extends Notifier<bool> {
+  @override
+  bool build() {
+    return false;
+  }
 
-  bool get isLastPage => _isLastPage;
-
-  set isLastPage (bool lastpage) {
-    _isLastPage = lastpage;
-    notifyListeners();
+  void onLastPage(bool lastpage) {
+    state = lastpage;
   }
 }

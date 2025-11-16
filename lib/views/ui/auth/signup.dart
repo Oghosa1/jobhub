@@ -8,8 +8,7 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _RegistrationPageState extends State<RegistrationPage> {
- 
- final TextEditingController name = TextEditingController();
+  final TextEditingController name = TextEditingController();
   final TextEditingController email = TextEditingController();
   final TextEditingController password = TextEditingController();
 
@@ -20,7 +19,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
     password.dispose();
     super.dispose();
   }
- 
+
   @override
   Widget build(BuildContext context) {
     return Container();

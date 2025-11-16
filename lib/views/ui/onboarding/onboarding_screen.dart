@@ -10,7 +10,7 @@ class OnBoardingScreen extends StatelessWidget {
       body: Center(
         child: ReusableText(
           text: "OnBoardingScreen",
-          style: appstyle(30, Color(kDark.value), FontWeight.bold),
+          style: appstyle(30, kDark, FontWeight.bold),
         ),
       ),
     );
