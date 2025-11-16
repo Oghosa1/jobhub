@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Dbestech JobHub',
+          title: 'JobHub',
           theme: ThemeData(
             scaffoldBackgroundColor: kLight,
             iconTheme: const IconThemeData(color: kDark),
