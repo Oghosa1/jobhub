@@ -99,6 +99,17 @@ This section will be updated after each phase to log the actions taken, things l
         *   Skipped full UI integration due to incomplete UI implementation.
         *   Skipped creating/modifying unit tests as there was no complex logic to test in the UI.
 
+*   **Phase 5 (In Progress):**
+    *   **Actions:**
+        *   Updated `README.md` with a section about Riverpod state management.
+        *   Updated `GEMINI.md` with a note about the MVVM deviation for this project.
+    *   **Learnings:**
+        *   It's important to document deviations from established protocols, especially when explicitly requested by the user.
+    *   **Surprises:**
+        *   None.
+    *   **Deviations:**
+        *   None.
+
 ## Phase 1: Project Setup and Initial Migration
 
 - [x] Run all tests to ensure the project is in a good state before starting modifications.
@@ -175,6 +186,6 @@ This section will be updated after each phase to log the actions taken, things l
 
 ## Phase 5: Finalization
 
-- [ ] Update the `README.md` file for the package with relevant information from the modification (if any).
-- [ ] Update the `GEMINI.md` file in the project directory so that it still correctly describes the app, its purpose, and implementation details and the layout of the files.
+- [x] Update the `README.md` file for the package with relevant information from the modification (if any).
+- [x] Update the `GEMINI.md` file in the project directory so that it still correctly describes the app, its purpose, and implementation details and the layout of the files.
 - [ ] Ask the user to inspect the package (and running app, if any) and say if they are satisfied with it, or if any modifications are needed.

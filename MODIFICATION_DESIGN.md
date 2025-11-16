@@ -15,7 +15,11 @@ The migration will involve:
 1.  **Removing `provider` and `get`:** All dependencies on `provider` and `get` will be removed from the `pubspec.yaml` file and the codebase.
 2.  **Introducing `riverpod`:** The `flutter_riverpod` package will be added as a dependency.
 3.  **Refactoring existing code:** All existing state management logic will be refactored to use Riverpod providers.
-4.  **Restructuring the project:** The project will be restructured to follow the MVVM pattern and the folder structure defined in `GEMINI.md`.
+4.  **Restructuring the project:** The project will be restructured to follow the folder structure defined in `GEMINI.md` for providers, but the MVVM pattern will not be strictly enforced for existing controllers as per user instruction.
+
+## Deviation from MVVM
+
+As per user instruction, the MVVM pattern was not strictly enforced during this migration. The existing `controllers` folder was retained, and new Riverpod notifiers were placed there. The `viewmodels` folder was not created, and existing UI files were not refactored into `views/pages` and `views/components`. This deviation was made to focus solely on the Riverpod/state management changes.
 
 ## Alternatives Considered
 
