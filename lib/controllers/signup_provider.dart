@@ -1,34 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class SignUpNotifier extends ChangeNotifier {
-  // trigger to hide and unhide the password
-  bool _isObsecure = true;
+class SignUpState {
+  final bool isObsecure;
+  final bool processing;
+  final bool firstTime;
 
-  bool get isObsecure => _isObsecure;
+  SignUpState({
+    this.isObsecure = true,
+    this.processing = false,
+    this.firstTime = false,
+  });
 
-  set isObsecure(bool obsecure) {
-    _isObsecure = obsecure;
-    notifyListeners();
+  SignUpState copyWith({bool? isObsecure, bool? processing, bool? firstTime}) {
+    return SignUpState(
+      isObsecure: isObsecure ?? this.isObsecure,
+      processing: processing ?? this.processing,
+      firstTime: firstTime ?? this.firstTime,
+    );
+  }
+}
+
+class SignUpNotifier extends Notifier<SignUpState> {
+  @override
+  SignUpState build() {
+    return SignUpState();
   }
 
-  // triggered when the login button is clicked to show the loading widget
-  bool _processing = false;
-
-  bool get processing => _processing;
-
-  set processing(bool newValue) {
-    _processing = newValue;
-    notifyListeners();
+  void setIsObsecure(bool obsecure) {
+    state = state.copyWith(isObsecure: obsecure);
   }
 
-  // triggered when the fist time when user login to be prompted to the update profile page
-  bool _firstTime = false;
+  void setProcessing(bool newValue) {
+    state = state.copyWith(processing: newValue);
+  }
 
-  bool get firstTime => _firstTime;
-
-  set firstTime(bool newValue) {
-    _firstTime = newValue;
-    notifyListeners();
+  void setFirstTime(bool newValue) {
+    state = state.copyWith(firstTime: newValue);
   }
 
   final signupFormKey = GlobalKey<FormState>();
