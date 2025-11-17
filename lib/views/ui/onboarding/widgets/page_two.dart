@@ -32,7 +32,7 @@ class PageTwo extends StatelessWidget {
                 child: Text(
                   'use your ability to find your dream job, and get the best job for you. This is the best way to stable yourself.',
                   textAlign: TextAlign.center,
-                  style: appstyle(16, kLight, FontWeight.w400),
+                  style: appstyle(16, kLightGrey, FontWeight.w400),
                 ),
               ),
             ],

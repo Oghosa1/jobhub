@@ -13,7 +13,7 @@ class OnBoardingScreen extends StatelessWidget {
       body: Stack(
         children: [
           PageView(
-            children: [
+            children: const [
               PageOne(),
               PageTwo(),
               PageThree(),

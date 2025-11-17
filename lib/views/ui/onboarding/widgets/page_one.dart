@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jobhub_mobile/constants/app_constants.dart';
 import 'package:jobhub_mobile/views/common/exports.dart';
 import 'package:jobhub_mobile/views/common/height_spacer.dart';
 
