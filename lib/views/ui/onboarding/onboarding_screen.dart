@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jobhub_mobile/views/common/exports.dart';
 import 'package:jobhub_mobile/views/ui/onboarding/widgets/page_one.dart';
 import 'package:jobhub_mobile/views/ui/onboarding/widgets/page_three.dart';
 import 'package:jobhub_mobile/views/ui/onboarding/widgets/page_two.dart';

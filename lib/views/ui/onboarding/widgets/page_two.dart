@@ -24,15 +24,15 @@ class PageTwo extends StatelessWidget {
             children: [
               ReusableText(
                 text: 'Stable Yourself \n With Your Ability',
-                style: appstyle(30, kLight, FontWeight.w600),
+                style: appFontStyle(30, kLight, FontWeight.w600),
               ),
               const HeightSpacer(size: 10),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
-                  'use your ability to find your dream job, and get the best job for you. This is the best way to stable yourself.',
+                  'Use your ability to find your dream job, and get the best job for you. This is the best way to stable yourself.',
                   textAlign: TextAlign.center,
-                  style: appstyle(16, kLightGrey, FontWeight.w400),
+                  style: appFontStyle(16, kLight, FontWeight.normal),
                 ),
               ),
             ],

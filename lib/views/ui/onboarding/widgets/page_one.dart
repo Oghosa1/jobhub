@@ -20,14 +20,14 @@ class PageOne extends StatelessWidget {
             children: [
               ReusableText(
                 text: 'Find Your Dream Job',
-                style: appstyle(30, kLight, FontWeight.w600),
+                style: appFontStyle(30, kLight, FontWeight.w600),
               ),
               const HeightSpacer(size: 10),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   'Find your dream job with our easy-to-use job search platform. Browse thousands of job listings and apply with just a few clicks.',
-                  style: appstyle(16, kLight, FontWeight.w400),
+                  style: appFontStyle(16, kLight, FontWeight.w400),
                   textAlign: TextAlign.center,
                 ),
               ),

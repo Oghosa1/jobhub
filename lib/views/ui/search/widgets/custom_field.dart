@@ -33,7 +33,7 @@ class CustomField extends StatelessWidget {
           hintText: hintText.toUpperCase(),
           suffixIcon: suffixIcon,
           suffixIconColor: kLight,
-          hintStyle: appstyle(16, kLight, FontWeight.w500),
+          hintStyle: appFontStyle(16, kLight, FontWeight.w500),
           // contentPadding: EdgeInsets.only(left: 24),
           errorBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.zero,
@@ -59,7 +59,7 @@ class CustomField extends StatelessWidget {
         ),
         controller: controller,
         cursorHeight: 25,
-        style: appstyle(14, kLight, FontWeight.w500),
+        style: appFontStyle(14, kLight, FontWeight.w500),
         onSubmitted: validator,
       ),
     );
