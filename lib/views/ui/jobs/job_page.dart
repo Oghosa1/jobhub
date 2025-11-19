@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class JobPage extends StatefulWidget {
+class JobPage extends ConsumerWidget {
   const JobPage({super.key});
 
   @override
-  State<JobPage> createState() => _JobPageState();
-}
-
-class _JobPageState extends State<JobPage> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container();
   }
 }

@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class ZoomNotifier extends ChangeNotifier {
-  int _currentIndex = 0;
+class ZoomNotifier extends Notifier<int> {
+  @override
+  int build() {
+    return 0;
+  }
 
-  int get currentIndex => _currentIndex;
-
-  set currentIndex(int newIndex) {
-    _currentIndex = newIndex;
-    notifyListeners();
+  void setCurrentIndex(int newIndex) {
+    state = newIndex;
   }
 }

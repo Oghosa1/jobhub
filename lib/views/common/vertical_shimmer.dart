@@ -10,22 +10,18 @@ class VerticalShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Animate(
-      effects: [
+      effects: const [
         ShimmerEffect(
           curve: Curves.easeInBack,
-          duration: const Duration(seconds: 7),
-          colors: [
-            Color(kLightGrey.value),
-            Color(kLightBlue.value),
-            Color(kLightGrey.value),
-          ],
+          duration: Duration(seconds: 7),
+          colors: [kLightGrey, kLightBlue, kLightGrey],
         ),
       ],
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         height: height * 0.15,
         width: width,
-        color: Color(kLightGrey.value),
+        color: kLightGrey,
       ),
     );
   }

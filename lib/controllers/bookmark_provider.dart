@@ -1,6 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+class BookMarkNotifier extends Notifier<bool> {
+  @override
+  bool build() {
+    return false;
+  }
 
-class BookMarkNotifier extends ChangeNotifier {
-  
+  void setBookMarkState(bool state) {
+    this.state = state;
+  }
 }

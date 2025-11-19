@@ -1,6 +1,12 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+class JobsNotifier extends Notifier<bool> {
+  @override
+  bool build() {
+    return false;
+  }
 
-class JobsNotifier extends ChangeNotifier {
- 
+  void setJobState(bool state) {
+    this.state = state;
+  }
 }

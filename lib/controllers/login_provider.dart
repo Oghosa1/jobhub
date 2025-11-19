@@ -1,6 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+class LoginNotifier extends Notifier<bool> {
+  @override
+  bool build() {
+    return false;
+  }
 
-class LoginNotifier extends ChangeNotifier {
-
+  void setLoginState(bool state) {
+    this.state = state;
+  }
 }
