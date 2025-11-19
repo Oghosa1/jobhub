@@ -1,6 +1,29 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:jobhub_mobile/controllers/onboarding_provider.dart';
+
+class OnBoardNotifier extends Notifier<bool> {
+  @override
+  bool build() {
+    return false;
+  }
+
+  void setIsLastPage(bool lastPage) {
+    state = lastPage;
+  }
+}
 
 final onBoardNotifierProvider = NotifierProvider<OnBoardNotifier, bool>(() {
   return OnBoardNotifier();
 });
+
+
+
+/*
+class OnBoardNotifier extends ChangeNotifier {
+ bool _isLastPage = false;
+ bool get isLastPage => _isLastPage;
+ set isLastPage(bool value) {
+  _isLastPage = value;
+  notifyListeners();
+ }
+}
+*/ 
